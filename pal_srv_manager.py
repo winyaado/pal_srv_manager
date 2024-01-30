@@ -4,6 +4,7 @@ import discord
 from discord.ext import commands
 
 import pal_config
+import pal_msg
 
 class MyBot(commands.Bot):
 
@@ -13,7 +14,7 @@ class MyBot(commands.Bot):
         super().__init__(
             intents=discord.Intents.all(),
             command_prefix=command_prefix,
-            activity=discord.Game(name=f"パル鯖缶 Vr.{pal_config.Version}"
+            activity=discord.Game(name=f'{pal_msg.activity_def}'
         ))
 
 
